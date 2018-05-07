@@ -1,0 +1,25 @@
+@border: 3px solid black;
+
+.content {
+  &__wrapper {
+    display: flex;
+    width: calc(100% - 6rem);
+    padding: 2rem 3rem;
+    border-right: @border;
+    border-bottom: @border;
+    border-left: @border;
+    > div:nth-child(2) {
+      margin-left: 3rem;
+    }
+    transition: opacity .4s ease-in;
+
+    &-no-show {
+      opacity: 0;
+      transition: opacity .4s ease-out;
+    }
+  }
+}
+
+#root {
+  padding: 0.5em;
+}
